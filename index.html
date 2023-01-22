@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skibidibop</title>
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <video class="video" loop="loop" muted="muted" autoplay="autoplay">
+        <source src="video.mp4" type="video/mp4">
+      </video>
+    <h1>twitter: @thorcervejeiro</h1>
+</body>
+<script>
+
+    
+    if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("/service-worker.js");
+        }
+
+        let video = document.querySelector(".video");
+
+        document.querySelector("body").addEventListener("click", () => {
+          video.muted = false;
+        });
+      
+</script>
+</html>
